@@ -10,32 +10,32 @@ let textCon = document.querySelector(".text-content");
 let textConH2 = document.querySelector(".text-content h2");
 
 
-// Using `mouseover` 1
+// Using `mouseover` -- 1
 navLink1.addEventListener('mouseover', (e) => {
     e.target.style.color = "teal";
 });
 
-// Using `keydown` 2
+// Using `keydown` -- 2
 document.addEventListener('keydown', (event) => {
     console.log(event.which)
 });
 
-// Using `load` 3
+// Using `load` -- 3
 window.addEventListener('load', () => {
-    // alert("Document has been loaded!");
+    // alert("Document has been loaded!"); // Uncomment this code to test
 });
 
-// Using `offline` 4
+// Using `offline` -- 4
 window.onoffline = function(){
     alert(`You have lost internet access!`);
 }
 
-// Using `dblclick` 5
+// Using `dblclick` -- 5
 headImage.ondblclick = function(e){
     e.target.style.display = "none";
 }
 
-// Using `resize` 6
+// Using `resize` -- 6
 function navBlack() {
     mainNav.style["background-color"] = "black";
     navLinks.forEach((ele) => {
@@ -45,7 +45,7 @@ function navBlack() {
 }
 window.addEventListener('resize', navBlack);
 
-// Using `drag / drop` 7
+// Using `drag / drop` -- 7
 var dragged;
 
 headImage.setAttribute("draggable", "true");
@@ -60,7 +60,7 @@ headImage.addEventListener('dragstart', function (e) {
 }, false);
 
 
-// Using `select` 8
+// Using `select` -- 8
 textConH2.innerHTML = "Let's Go!<br>";
 
 let textConTextArea = document.createElement("textarea");
@@ -72,21 +72,22 @@ let result = document.createElement("p");
 result.classList.add("selectedText");
 textConH2.appendChild(result);
 
-
 function textSelection(event) {
     const textLog = document.querySelector('.selectedText');
     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
     textLog.textContent = `You selected: ${selection}`;
+    textLog.style["font-family"] = `'Roboto', sans-serif`;
 }
 
-let homeText = document.querySelector(".homeText");homeText.addEventListener('select', textSelection);
+let homeText = document.querySelector(".homeText");
+homeText.style["font-family"] = `'Roboto', sans-serif`;
+homeText.addEventListener('select', textSelection);
 
 
 
 //  []`drag / drop`
 //  []`focus`
 //  []`scroll`
-//  []`select`
 
 
 // Stopping Navigation from propagating
