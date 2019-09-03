@@ -84,10 +84,16 @@ homeText.style["font-family"] = `'Roboto', sans-serif`;
 homeText.addEventListener('select', textSelection);
 
 
+// Using `focus` -- 9
+homeText.addEventListener("focus", (e) => {
+    e.target.style.background = "grey";
+})
+
+// Using `` -- 10
+
+
 
 //  []`drag / drop`
-//  []`focus`
-//  []`scroll`
 
 
 // Stopping Navigation from propagating
