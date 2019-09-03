@@ -1,12 +1,5 @@
 // Your code goes here
 
-//  []`wheel`
-//  []`drag / drop`
-//  []`focus`
-//  []`resize`
-//  []`scroll`
-//  []`select`
-
 let mainNav = document.querySelector(".main-navigation");
 let navLinks = document.querySelectorAll("a");
 let navLink1 = document.querySelector(".nav-link:nth-of-type(1)");
@@ -23,12 +16,11 @@ navLink1.addEventListener('mouseover', (e) => {
 // Using `keydown` 2
 document.addEventListener('keydown', (event) => {
     console.log(event.which)
-    // e.target.style.opacity = Number("0.5");
 });
 
 // Using `load` 3
 window.addEventListener('load', () => {
-    console.log("Document has been loaded!");
+    // alert("Document has been loaded!");
 });
 
 // Using `offline` 4
@@ -51,8 +43,26 @@ function navBlack() {
 }
 window.addEventListener('resize', navBlack);
 
-// 7
+// `drag / drop` 7
+var dragged;
 
+// headImage.setAttribute("draggable", "true");
+
+headImage.addEventListener('drag', function(e){
+  
+}, false);
+
+headImage.addEventListener('dragstart', function (e) {
+    dragged = e.target;
+    console.log(`The header image has been dragged!`);
+}, false);
+
+
+
+//  []`drag / drop`
+//  []`focus`
+//  []`scroll`
+//  []`select`
 
 
 // Stopping Navigation from propagating
@@ -61,6 +71,3 @@ window.addEventListener('resize', navBlack);
 //     e.preventDefault();
 //     console.log(`default prevented`);
 // }
-
-
-
