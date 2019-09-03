@@ -29,7 +29,10 @@ window.addEventListener('load', () => {
     console.log("Document has been loaded!");
 });
 
-
+// Using `offline`
+window.onoffline = function(){
+    alert(`You have lost internet access!`);
+}
 
 
 // Stopping Navigation from propagating
