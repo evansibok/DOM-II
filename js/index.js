@@ -11,6 +11,7 @@
 let navLink1 = document.querySelector(".nav-link:nth-of-type(1)");
 let navLink2 = document.querySelector(".nav-link:nth-of-type(2)");
 // let h1 = document.querySelector("h1.logo-heading");
+let headImage = document.querySelector(".intro img");
 
 // Using `mouseover` 1
 navLink1.addEventListener('mouseover', (e) => {
@@ -29,9 +30,14 @@ window.addEventListener('load', () => {
     console.log("Document has been loaded!");
 });
 
-// Using `offline`
+// Using `offline` 4
 window.onoffline = function(){
     alert(`You have lost internet access!`);
+}
+
+// Using `dblclick` 5
+headImage.ondblclick = function(e){
+    e.target.style.display = "none";
 }
 
 
