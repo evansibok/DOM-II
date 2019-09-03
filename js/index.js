@@ -1,31 +1,35 @@
 // Your code goes here
 
-//  []`mouseover`
-//  []`keydown`
 //  []`wheel`
 //  []`drag / drop`
-//  []`load`
 //  []`focus`
 //  []`resize`
 //  []`scroll`
 //  []`select`
 //  []`dblclick`
 
-let navLink2 = document.querySelector(".nav-link:nth-of-type(2)");
 let navLink1 = document.querySelector(".nav-link:nth-of-type(1)");
-let h1 = document.querySelector("h1.logo-heading");
+let navLink2 = document.querySelector(".nav-link:nth-of-type(2)");
+// let h1 = document.querySelector("h1.logo-heading");
 
-// Using `mouseover`
+// Using `mouseover` 1
 navLink1.addEventListener('mouseover', (e) => {
     e.target.style.color = "teal";
 });
 
 
-// Using `keydown`
+// Using `keydown` 2
 document.addEventListener('keydown', (event) => {
     console.log(event.which)
     // e.target.style.opacity = Number("0.5");
 });
+
+// Using `load` 3
+window.addEventListener('load', () => {
+    console.log("Document has been loaded!");
+});
+
+
 
 
 // Stopping Navigation from propagating
@@ -37,7 +41,3 @@ document.addEventListener('keydown', (event) => {
 
 
 
-// Using `load`
-// document.addEventListener('load', (e) => {
-//     console.log("Load has been used!");
-// }) // NOT WORKING
