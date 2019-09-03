@@ -6,6 +6,8 @@ let navLink1 = document.querySelector(".nav-link:nth-of-type(1)");
 let navLink2 = document.querySelector(".nav-link:nth-of-type(2)");
 let headImage = document.querySelector(".intro img");
 let h1 = document.querySelector(".logo-heading");
+let textCon = document.querySelector(".text-content");
+let textConH2 = document.querySelector(".text-content h2");
 
 
 // Using `mouseover` 1
@@ -43,10 +45,10 @@ function navBlack() {
 }
 window.addEventListener('resize', navBlack);
 
-// `drag / drop` 7
+// Using `drag / drop` 7
 var dragged;
 
-// headImage.setAttribute("draggable", "true");
+headImage.setAttribute("draggable", "true");
 
 headImage.addEventListener('drag', function(e){
   
@@ -56,6 +58,28 @@ headImage.addEventListener('dragstart', function (e) {
     dragged = e.target;
     console.log(`The header image has been dragged!`);
 }, false);
+
+
+// Using `select` 8
+textConH2.innerHTML = "Let's Go!<br>";
+
+let textConTextArea = document.createElement("textarea");
+textConTextArea.classList.add("homeText");
+textConTextArea.innerHTML = "Select Your Text Here!";
+textConH2.appendChild(textConTextArea);
+
+let result = document.createElement("p");
+result.classList.add("selectedText");
+textConH2.appendChild(result);
+
+
+function textSelection(event) {
+    const textLog = document.querySelector('.selectedText');
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    textLog.textContent = `You selected: ${selection}`;
+}
+
+let homeText = document.querySelector(".homeText");homeText.addEventListener('select', textSelection);
 
 
 
