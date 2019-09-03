@@ -1,5 +1,17 @@
 // Your code goes here
 
+// LISTS OF EVENTS USED
+// `mouseover`
+// `keydown`
+// `load`
+// `offline`
+// `dblclick`
+// `resize`
+// `drag / drop`
+// `select`
+// `focus`
+// `beforeunload`
+
 let mainNav = document.querySelector(".main-navigation");
 let navLinks = document.querySelectorAll("a");
 let navLink1 = document.querySelector(".nav-link:nth-of-type(1)");
@@ -10,32 +22,32 @@ let textCon = document.querySelector(".text-content");
 let textConH2 = document.querySelector(".text-content h2");
 
 
-// Using `mouseover` -- 1
+// `mouseover` -- 1
 navLink1.addEventListener('mouseover', (e) => {
     e.target.style.color = "teal";
 });
 
-// Using `keydown` -- 2
+// `keydown` -- 2
 document.addEventListener('keydown', (event) => {
     console.log(event.which)
 });
 
-// Using `load` -- 3
+// `load` -- 3
 window.addEventListener('load', () => {
     // alert("Document has been loaded!"); // Uncomment this code to test
 });
 
-// Using `offline` -- 4
+// `offline` -- 4
 window.onoffline = function(){
     alert(`You have lost internet access!`);
 }
 
-// Using `dblclick` -- 5
+// `dblclick` -- 5
 headImage.ondblclick = function(e){
     e.target.style.display = "none";
 }
 
-// Using `resize` -- 6
+// `resize` -- 6
 function navBlack() {
     mainNav.style["background-color"] = "black";
     navLinks.forEach((ele) => {
@@ -45,7 +57,7 @@ function navBlack() {
 }
 window.addEventListener('resize', navBlack);
 
-// Using `drag / drop` -- 7
+// `drag / drop` -- 7
 var dragged;
 
 headImage.setAttribute("draggable", "true");
@@ -60,7 +72,7 @@ headImage.addEventListener('dragstart', function (e) {
 }, false);
 
 
-// Using `select` -- 8
+// `select` -- 8
 textConH2.innerHTML = "Let's Go!<br>";
 
 let textConTextArea = document.createElement("textarea");
@@ -84,16 +96,18 @@ homeText.style["font-family"] = `'Roboto', sans-serif`;
 homeText.addEventListener('select', textSelection);
 
 
-// Using `focus` -- 9
+// `focus` -- 9
 homeText.addEventListener("focus", (e) => {
     e.target.style.background = "grey";
 })
 
-// Using `` -- 10
+// `beforeunload` -- 10
+navLink1.setAttribute('href', 'https://github.com');
+window.onbeforeunload = (e) => {
+    e.preventDefault();
 
-
-
-//  []`drag / drop`
+    e.returnValue = '';
+};
 
 
 // Stopping Navigation from propagating
