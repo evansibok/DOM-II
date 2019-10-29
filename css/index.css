@@ -194,6 +194,9 @@ img {
     padding-top: 10px;
   }
 }
+.main-navigation .nav-container .logo-heading {
+  position: relative;
+}
 @media (max-width: 500px) {
   .main-navigation .nav-container .logo-heading {
     font-size: 3rem;
@@ -203,6 +206,7 @@ img {
   width: 350px;
   display: flex;
   justify-content: space-evenly;
+  left: auto;
 }
 @media (max-width: 500px) {
   .main-navigation .nav-container .nav {

@@ -34,7 +34,7 @@ document.addEventListener('keydown', (event) => {
 
 // `load` -- 3
 window.addEventListener('load', () => {
-    // alert("Document has been loaded!"); // Uncomment this code to test
+    alert("Document has been loaded!"); // Uncomment this code to test
 });
 
 // `offline` -- 4
@@ -116,3 +116,6 @@ window.onbeforeunload = (e) => {
 //     e.preventDefault();
 //     console.log(`default prevented`);
 // }
+
+// USING GREENSOCK - GSAP
+TweenMax.to(".logo-heading", 6, {left: 200, color: "#ca251a"});
