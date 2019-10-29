@@ -102,12 +102,12 @@ homeText.addEventListener("focus", (e) => {
 })
 
 // `beforeunload` -- 10
-navLink1.setAttribute('href', 'https://github.com');
-window.onbeforeunload = (e) => {
-    e.preventDefault();
+// navLink1.setAttribute('href', 'https://github.com');
+// window.onbeforeunload = (e) => {
+//     e.preventDefault();
 
-    e.returnValue = '';
-};
+//     e.returnValue = '';
+// };
 
 
 // Stopping Navigation from propagating
@@ -116,3 +116,6 @@ window.onbeforeunload = (e) => {
 //     e.preventDefault();
 //     console.log(`default prevented`);
 // }
+
+// USING GREENSOCK - GSAP
+TweenMax.to(".logo-heading", 2, {left: 200});
