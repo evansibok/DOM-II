@@ -34,7 +34,7 @@ document.addEventListener('keydown', (event) => {
 
 // `load` -- 3
 window.addEventListener('load', () => {
-    // alert("Document has been loaded!"); // Uncomment this code to test
+    alert("Document has been loaded!"); // Uncomment this code to test
 });
 
 // `offline` -- 4
@@ -102,12 +102,12 @@ homeText.addEventListener("focus", (e) => {
 })
 
 // `beforeunload` -- 10
-// navLink1.setAttribute('href', 'https://github.com');
-// window.onbeforeunload = (e) => {
-//     e.preventDefault();
+navLink1.setAttribute('href', 'https://github.com');
+window.onbeforeunload = (e) => {
+    e.preventDefault();
 
-//     e.returnValue = '';
-// };
+    e.returnValue = '';
+};
 
 
 // Stopping Navigation from propagating
