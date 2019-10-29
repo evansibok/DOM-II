@@ -118,4 +118,4 @@ homeText.addEventListener("focus", (e) => {
 // }
 
 // USING GREENSOCK - GSAP
-TweenMax.to(".logo-heading", 2, {left: 200});
+TweenMax.to(".logo-heading", 6, {left: 200, color: "#ca251a"});
